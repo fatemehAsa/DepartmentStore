@@ -1,0 +1,89 @@
+﻿@page "{id}"
+@model DepartmentStore.Web.Pages.Admin.Products.CreateSubProductModel
+@{
+    ViewData["Title"] = "کالای جدید";
+}
+<div class="row">
+    <p></p>
+    <div class="container">
+        <h2>افزودن کالای جدید</h2>
+    </div>
+    <hr />
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="SubProduct.ProductId" />
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>عنوان کالا</label>
+                <input type="text" asp-for="SubProduct.SubProductTitle" class="form-control">
+                <span asp-validation-for="SubProduct.SubProductTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>کشور تولید کننده</label>
+                <select class="form-control" asp-for="SubProduct.CountryMade.MadeId" asp-items="@ViewData["CountryMade"] as SelectList"></select>
+                <span asp-validation-for="SubProduct.CountryMade.MadeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>شرح کالا</label>
+                <textarea class="form-control" asp-for="SubProduct.ProductDescription" rows="10"></textarea>
+                <span asp-validation-for="SubProduct.ProductDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>قیمت کالا</label>
+                <input type="number" asp-for="SubProduct.ProductPrice" class="form-control">
+                <span asp-validation-for="SubProduct.ProductPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>کلمات کلیدی دوره</label>
+                <input type="text" asp-for="SubProduct.Tags" class="form-control">
+                <p>کلمات کلیدی را با - جدا کنید</p>
+                <span asp-validation-for="SubProduct.Tags" class="text-danger"></span>
+            </div>
+            <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
+        </div>
+        <div class="col-md-4">
+            <p></p>
+            <img class="thumbnail" src="/SubProduct/image/no-photo.jpg" id="imgCourse" />
+            <div class="form-group">
+                <label>انتخاب تصویر</label>
+                <input type="file" name="imgSubProductUp" id="imgSubProductUp">
+                <p class="text-danger">عکس اجباری است</p>
+                <span asp-validation-for="SubProduct.SubProductImageName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>ابعاد</label>
+                <input type="text" asp-for="SubProduct.Dimention" class="form-control" placeholder="180*12">
+                <p class="help-block">لطفا در نگارش ابعاد دقت فرمایید</p>
+                <span asp-validation-for="SubProduct.Dimention" class="text-danger"></span>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts
+{
+    <script>
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgCourse').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgSubProductUp").change(function () {
+            readURL(this);
+        });
+    </script>
+
+    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('SubProduct_ProductDescription', {
+            customConfig: '/js/ConfigCkEditor.js'
+        });
+
+    </script>
+}

@@ -1,0 +1,62 @@
+﻿@using DepartmentStore.Core.DTOs
+@using DepartmentStore.Core.Services.Interfaces
+@using DepartmentStore.DataLayer.Entities.User
+@model DepartmentStore.Core.DTOs.RegisterViewModel
+@{
+    ViewData["Title"] = "ثبت نام";
+}
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">ایران ابزار</a></li>
+            <li id="RegisterText" class="breadcrumb-item active" aria-current="page">عضویت در سایت</li>
+        </ul>
+    </nav>
+</div>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-2" type="radio" name="tab" class="sign-up" checked><label for="tab-2" class="tab">ثبت نام</label>
+        <div class="login-form">
+            <form asp-action="Register" method="post">
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">نام و نام خانوادگی</label>
+                        <input asp-for="UserName" name="UserName" id="user" type="text" class="input">
+                    </div>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                    <div class="group">
+                        <label for="pass" class="label">آدرس</label>
+                        <input asp-for="Address" id="pass" type="text" class="input">
+                    </div>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                    <div class="group">
+                        <label for="pass" class="label">ایمیل</label>
+                        <input asp-for="Email" name="Email" id="pass" type="text" class="input">
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <div class="group">
+                        <label for="pass" class="label">کلمه عبور</label>
+                        <input asp-for="Password" id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <div class="group">
+                        <label for="pass" class="label">تکرار کلمه عبور</label>
+                        <input asp-for="RePassword" id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <span asp-validation-for="RePassword" class="text-danger"></span>
+                    <div class="group">
+                        <input type="submit" class="button" value="ثبت نام">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="/Login">
+                            قبلا عضو شده ام!
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

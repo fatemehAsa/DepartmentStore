@@ -1,0 +1,12 @@
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.deps.json
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.runtimeconfig.json
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.runtimeconfig.dev.json
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.dll
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.pdb
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.AssemblyInfoInputs.cache
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.AssemblyInfo.cs
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.csproj.CoreCompileInputs.cache
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.dll
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.pdb
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.genruntimeconfig.cache
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.DataLayer\obj\Debug\netcoreapp3.1\DepartmentStore.DataLayer.csprojAssemblyReference.cache

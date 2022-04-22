@@ -1,0 +1,52 @@
+﻿@using DepartmentStore.Core.Convertors
+@using DepartmentStore.Core.Services.Interfaces
+@model DepartmentStore.Core.DTOs.UserInformationViewModel
+@{
+    ViewData["Title"] = "پنل کاربری" + " " + User.Identity.Name;
+}
+@inject IPermissionService _permissionService;
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">ایران ابزار</a></li>
+            <li id="RegisterText" class="breadcrumb-item active" aria-current="page">پنل کاربری</li>
+        </ul>
+    </nav>
+</div>
+<main class="account">
+    <partial name="_SideProfile" />
+    <div class="container">
+        <div class="user-account">
+            <div class="row">
+                <partial name="_SideBar" />
+                <div class="col-md-8 col-sm-7 col-xs-12">
+                    <section class="user-account-content">
+                        <div>
+                            <h1> داشبورد </h1>
+                        </div>
+                        <div class="inner">
+                            <div class="account-information">
+                                <h3> اطلاعات کاربری </h3>
+                                <ul>
+                                    <li> <i class="fa fa-user"></i> نام کاربری : @Model.UserName </li>
+                                    <li> <i class="fa fa-envelope"></i> ایمیل : @Model.Email </li>
+                                    <li> <i class="fa fa-calendar"></i> تاریخ عضویت : @Model.RegisterDate.ToShamsi() </li>
+                                    <li> <i class="fa fa-map-marker"></i> آدرس : @Model.Address </li>
+                                    @if (_permissionService.CheckPermission(1, User.Identity.Name))
+                                    {
+                                        <li>
+                                            <a href="/Admin" class="btn btn-info">
+                                                ورود به پنل ادمین
+                                            </a>
+                                        </li>
+
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

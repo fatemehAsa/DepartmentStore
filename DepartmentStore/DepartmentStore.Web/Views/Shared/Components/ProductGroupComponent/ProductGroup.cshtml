@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DepartmentStore.DataLayer.Entities.Product.ProductGroup>
+
+<div class="overlay"></div>
+<header>
+    <h1>logo</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="clientarea">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="loggein">
+                            <i class="fa fa-user"></i><a href="/UserPanel">@User.Identity.Name ، خوش آمدید </a>
+                            /
+                            <a href="/Logout"> خروج </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="signin">
+                            <i class="fa fa-user"></i>
+                            <a href="/Login"> ورود </a> /
+                            <a href="/Register"> عضویت </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sc-container">
+        <form>
+            <div class="sc-searchbox">
+                <input required type="text" class="sc-searchbox-field" />
+                <div class="sc-searchbox-placeholder">
+                    <p class="sc-searchbox-placeholder-text">جستجو ...</p>
+                </div>
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="menu-mobile">&#9776;</div>
+    <div class="sc-container sc-mobile">
+        <form>
+            <div class="sc-searchbox">
+                <input required type="text" class="sc-searchbox-field" />
+                <div class="sc-searchbox-placeholder">
+                    <p class="sc-searchbox-placeholder-text">جستجو ...</p>
+                </div>
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="closebtn" onclick="closeNav()">&times;</div>
+    <div class="menu-container">
+        <div class="menu">
+            <ul>
+                <li><a href="#">خانه</a></li>
+               @foreach (var group in Model.Where(g => g.ParentId == null))
+               {
+                   <li>
+                       <a href="#">@group.GroupTitle</a>
+                       @if (Model.Any(g => g.ParentId == group.GroupId))
+                       {
+                           <ul>
+                         @foreach (var sub in Model.Where(g => g.ParentId == group.GroupId))
+                         {
+                             <li>
+                                 <a href="#">@sub.GroupTitle</a>
+                             </li>
+                         }
+                           </ul>
+                       }
+                   </li>
+               }
+            </ul>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,80 @@
+﻿@page
+@model DepartmentStore.Web.Pages.Admin.Products.CreateProductModel
+@{
+    ViewData["Title"] = "افزودن بخش جدید";
+}
+<div class="row">
+    <p></p>
+    <div class="container">
+        <h2>افزودن بخش جدید</h2>
+    </div>
+    <hr />
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>عنوان بخش</label>
+                <input type="text" asp-for="Product.ProductTitle" class="form-control">
+                <span asp-validation-for="Product.ProductTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>گروه اصلی</label>
+                <select class="form-control" asp-for="Product.GroupId" asp-items="@ViewData["Groups"] as SelectList"></select>
+                <span asp-validation-for="Product.GroupId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>گروه فرعی</label>
+                <select class="form-control" asp-for="Product.SubGroupId" asp-items="@ViewData["SubGroups"] as SelectList"></select>
+                <span asp-validation-for="Product.SubGroupId" class="text-danger"></span>
+            </div>
+            <input type="submit" value="ذخیره اطلاعات" class="btn btn-success" />
+        </div>
+        <div class="col-md-4">
+            <p></p>
+            <img class="thumbnail" src="/UserAvatar/Defult.jpg" id="imgCourse" />
+            <div class="form-group">
+                <label>انتخاب تصویر</label>
+                <input type="file" name="imgProductUp" id="imgProductUp">
+                <span asp-validation-for="Product.ProductImageName" class="text-danger"></span>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts
+{
+    <script>
+        $("#Product_GroupId").change(function () {
+            $("#Product_SubGroupId").empty();
+            $.getJSON("/home/GetSubGroups/" + $("#Product_GroupId :selected").val(),
+                function (data) {
+
+                    $.each(data,
+                        function () {
+                            $("#Product_SubGroupId").append('<option value=' + this.value + '>' + this.text + '</option>');
+
+                        });
+
+                });
+
+
+        });
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgCourse').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgProductUp").change(function () {
+            readURL(this);
+        });
+    </script>
+}

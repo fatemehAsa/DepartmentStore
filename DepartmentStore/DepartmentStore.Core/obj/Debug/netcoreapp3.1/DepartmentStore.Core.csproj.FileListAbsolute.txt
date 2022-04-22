@@ -1,0 +1,15 @@
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.Core.deps.json
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.Core.runtimeconfig.json
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.Core.runtimeconfig.dev.json
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.Core.dll
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.Core.pdb
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.dll
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\bin\Debug\netcoreapp3.1\DepartmentStore.DataLayer.pdb
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.csprojAssemblyReference.cache
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.AssemblyInfoInputs.cache
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.AssemblyInfo.cs
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.csproj.CoreCompileInputs.cache
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.csproj.CopyComplete
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.dll
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.pdb
+D:\programing\DepartmentStore.CoreProject\DepartmentStore\DepartmentStore.Core\obj\Debug\netcoreapp3.1\DepartmentStore.Core.genruntimeconfig.cache

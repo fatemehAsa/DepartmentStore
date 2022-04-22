@@ -1,0 +1,21 @@
+﻿@using DepartmentStore.Core.Convertors
+@using DepartmentStore.Core.DTOs
+@using DepartmentStore.Core.Services.Interfaces
+@inject IUserService _userService
+@{
+    SideProfileViewModel profile = _userService.GetSideProfileData(User.Identity.Name);
+}
+<div class="container">
+    <div class="cover row">
+        <h1>@profile.UserName</h1>
+        <div class="profile-img">
+            <img class="img-thumbnail" src="/UserAvatar/@profile.ImageName">
+            <a href="/UserPanel/EditProfile" class="change-image">
+                <button class="btn btn-sm btn-default">
+                    ویرایش حساب کاربری
+                    <i class="fa fa-edit"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

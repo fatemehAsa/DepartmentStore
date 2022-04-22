@@ -1,0 +1,34 @@
+﻿@page "{id}"
+@using DepartmentStore.Core.Convertors
+@model DepartmentStore.Web.Pages.Admin.Users.ReturnUserModel
+@{
+    ViewData["Title"] = "بازگردانی کاربر";
+}
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            بازگردانی کاربر
+        </div>
+        <div class="panel-body">
+            <form method="post">
+                <input type="hidden" name="UserId" value="@ViewData["UserId"].ToString()" />
+                <dl class="dl-horizontal">
+                    <dt>نام کاربری: </dt>
+                    <dd>@Model.UserInformationViewModel.UserName</dd>
+                    <dt>ایمیل: </dt>
+                    <dd>@Model.UserInformationViewModel.Email</dd>
+                    <dt>آدرس: </dt>
+                    <dd>@Model.UserInformationViewModel.Address</dd>
+                    <dt>تاریخ عضویت: </dt>
+                    <dd>@Model.UserInformationViewModel.RegisterDate.ToShamsi()</dd>
+                    <dt></dt>
+                    <dd>
+                        <input type="submit" class="btn btn-primary" value="بازگرداندن کاربر" />
+                    </dd>
+                </dl>
+            </form>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+</div>
